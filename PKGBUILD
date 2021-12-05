@@ -26,5 +26,6 @@ build() {
 package() {
   cd "${srcdir}/${_pkgbase}"
   make LIBDIR=/usr/lib DESTDIR="$pkgdir/" install
+  rm -f "$pkgdir/etc/ofono/ril_subscription.conf"
 }
 
